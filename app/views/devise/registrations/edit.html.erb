@@ -1,0 +1,47 @@
+<%=h content_for(:title, "Edit Account") %>
+
+<div class="container">
+  <div class="row-fluid well">
+    <div class="span4">
+      <h3>Account Details</h3>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="control-group"><%= f.label :email %>
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div  class="control-group"><%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+  <%= f.password_field :password, :autocomplete => "off" %></div>
+
+  <div  class="control-group"><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></div>
+
+  <div  class="control-group"><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+  <%= f.password_field :current_password %></div>
+
+  <div><%= f.submit "Update", :class => "btn btn-large btn-primary" %></div>
+<% end %>
+
+</div>
+<div class="span4 offset4">
+<h3>Import Bookmarks</h3>
+<%= button_to "Import CSV file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+<%= button_to "Import XML file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+<%= button_to "Import XLS file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+
+<h3>Export Bookmarks</h3>
+<%= button_to "Export CSV file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+<%= button_to "Export XML file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+<%= button_to "Export XLS file", '#', :method => :get, :class => "btn btn-medium btn-info" %>
+
+<h3>Unhappy?</h3>
+
+<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn btn-medium btn-danger" %>
+
+</div>
+</div>
+</div>

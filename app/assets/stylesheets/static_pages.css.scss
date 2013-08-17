@@ -1,0 +1,64 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+
+html {
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #000000
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+#navbar-intro
+{
+  margin-top: 10px;
+  color: #999;
+}
+
+#navbar-introtext
+{
+  color: #4d4;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  margin-left: 8em;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+
+footer ul li {
+  list-style: none;
+  float: left;
+  margin-left: 2em;
+}
+
