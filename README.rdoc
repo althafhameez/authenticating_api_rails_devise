@@ -2,3 +2,4 @@
 
 Source Code for [Authenticating an API with Grape and Devise in Rails 4](http://althafhameez.com/blog/2013/07/10/authenticating-an-api-with-grape-and-devise-in-rails-4/)
 
+This source was rehashed from an existing project and was untested for this push. If there are any bugs don't hesitate to contact me.
